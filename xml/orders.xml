@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="orders.xsl"?>
+<!DOCTYPE orders[
+<!ELEMENT orders (order*)>
+<!ELEMENT order (number,copies-count,status,cost*,work-date*,customer-id,artist-id,preorder-id)>
+<!ATTLIST order id CDATA #REQUIRED>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT copies-count (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT cost (prepayment,prepayment-date,all-payment,all-payment-date)>
+<!ELEMENT prepayment (#PCDATA)>
+<!ELEMENT prepayment-date (#PCDATA)>
+<!ELEMENT all-payment (#PCDATA)>
+<!ELEMENT all-payment-date (#PCDATA)>
+<!ELEMENT work-date (start-date,end-date)>
+<!ELEMENT start-date (#PCDATA)>
+<!ELEMENT end-date (#PCDATA)>
+<!ELEMENT customer-id EMPTY>
+<!ATTLIST customer-id id CDATA #REQUIRED>
+<!ELEMENT artist-id EMPTY>
+<!ATTLIST artist-id id CDATA #REQUIRED>
+<!ELEMENT preorder-id EMPTY>
+<!ATTLIST preorder-id id CDATA #REQUIRED>
+]>
+
+<orders>
+	<order id="H001">
+		<number>H001</number>
+		<copies-count>1 штука</copies-count>
+		<status>Внесена предоплата</status>
+		<cost>
+			<prepayment>1000 р.</prepayment>
+			<prepayment-date>16.03.21</prepayment-date>
+			<all-payment>5000 р.</all-payment>
+			<all-payment-date>19.03.21</all-payment-date>
+		</cost>
+		<work-date>
+			<start-date>21.03.21</start-date>
+			<end-date>03.04.21</end-date>
+		</work-date>
+		<customer-id id="231"/>
+		<artist-id id="034"/>
+		<preorder-id id="KL50"/>
+	</order>
+	<order id="A489">
+		<number>A489</number>
+		<copies-count>3 штуки</copies-count>
+		<status>Завершен</status>		
+		<cost>
+			<prepayment>1400 р.</prepayment>
+			<prepayment-date>15.02.21</prepayment-date>
+			<all-payment>7000 р.</all-payment>
+			<all-payment-date>18.02.21</all-payment-date>
+		</cost>
+		<work-date>
+			<start-date>22.02.21</start-date>
+			<end-date>29.02.21</end-date>
+		</work-date>
+		<customer-id id="011"/>
+		<artist-id id="012"/>
+		<preorder-id id="ER91"/>
+	</order>
+</orders>

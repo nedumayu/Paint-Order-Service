@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="artists.xsl"?>
+<!DOCTYPE artists[
+<!ELEMENT artists (artist*)>
+<!ELEMENT artist (fullname,phone-number,e-mail,work-experience,achievements,status,portfolio*)>
+<!ATTLIST artist id CDATA #REQUIRED>
+<!ELEMENT fullname (#PCDATA)>
+<!ELEMENT phone-number (#PCDATA)>
+<!ELEMENT e-mail (#PCDATA)>
+<!ELEMENT work-experience (#PCDATA)>
+<!ELEMENT achievements (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT portfolio (styles,genres,technicians,material)>
+<!ELEMENT styles (#PCDATA)>
+<!ELEMENT genres (#PCDATA)>
+<!ELEMENT technicians (#PCDATA)>
+<!ELEMENT material (#PCDATA)>
+]>
+
+<artists>
+	<artist id="034">
+		<fullname>Евгения Александровна Малеренко</fullname>
+		<phone-number>+79219991122</phone-number>
+		<e-mail>malevg@mail.ru</e-mail>
+		<work-experience>2 года</work-experience>
+		<achievements>участие в выставках, участие в конкурсах</achievements>
+		<status>работает</status>
+		<portfolio>				
+			<styles>Реализм, абстракционизм</styles>
+			<genres>Портрет</genres>
+			<technicians>Акрил</technicians>
+			<material>Холст, бумага</material>
+		</portfolio>
+	</artist>
+	<artist id="012">
+		<fullname>Александра Антоновна Громовая</fullname>
+		<phone-number>+79345678192</phone-number>
+		<e-mail>gromov@gmail.com</e-mail>
+		<work-experience>10 лет</work-experience>
+		<achievements>нахождение работ в коллекциях</achievements>
+		<status>не работает</status>				
+		<portfolio>		
+			<styles>Импрессионизм</styles>
+			<genres>Пейзаж</genres>
+			<technicians>Масло</technicians>
+			<material>Холст</material>
+		</portfolio>
+	</artist>	
+</artists>
+
+

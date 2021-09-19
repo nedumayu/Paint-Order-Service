@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="preorders.xsl"?>
+<!DOCTYPE preorders[
+<!ELEMENT preorders (preorder*)>
+<!ELEMENT preorder (customer-id,style,technique,material,picture-size*,term*,comment,picure)>
+<!ATTLIST preorder id CDATA #REQUIRED>
+<!ELEMENT customer-id EMPTY>
+<!ATTLIST customer-id id CDATA #REQUIRED>
+<!ELEMENT style (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT technique (#PCDATA)>
+<!ELEMENT material (#PCDATA)>
+<!ELEMENT picture-size (width,length)>
+<!ELEMENT width (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ELEMENT term (term-type,days-count)>
+<!ELEMENT term-type (#PCDATA)>
+<!ELEMENT days-count (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
+<!ELEMENT picure (#PCDATA)>
+]>
+
+<preorders>
+	<preorder id="TT22">
+		<customer-id id="231"/>
+		<style>Реализм</style>
+		<genre>Натюрморт</genre>
+		<technique>Гуашь</technique>
+		<material>Доска</material>
+		<picture-size>
+			<width>20 см</width> 
+			<length>35 см</length>		
+		</picture-size>	
+		<term>
+			<term-type>Несрочный заказ</term-type>
+			<days-count>20 дней</days-count>
+		</term>
+		<comment>Натюрморт в реалистичном стиле, на котором будут изображены различные фрукты и цветы. Пример на картинке</comment>
+		<picure>mydocs/IMG42342.jpg</picure>
+	</preorder>
+	<preorder id="SW67">
+		<customer-id id="011"/>
+		<style>Кубизм</style>
+		<genre>Портрет</genre>
+		<technique>Акрил</technique>
+		<material>Холст</material>
+		<picture-size>
+			<width>10 см</width> 
+			<length>20 см</length>		
+		</picture-size>	
+		<term>
+			<term-type>Срочный заказ</term-type>
+			<days-count>7 дней</days-count>
+		</term>
+		<comment>Нет комментария</comment>
+		<picure>Нет картинки</picure>
+	</preorder>
+</preorders>

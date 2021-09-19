@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="clients.xsl"?>
+<!DOCTYPE customers[
+<!ELEMENT customers (customer*)>
+<!ELEMENT customer (fullname,phone-number,e-mail,status)>
+<!ATTLIST customer id CDATA #REQUIRED>
+<!ELEMENT fullname (#PCDATA)>
+<!ELEMENT phone-number (#PCDATA)>
+<!ELEMENT e-mail (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+]>
+
+<customers>
+	<customer id="231">
+		<fullname>Панномарев Александр Алексеевич</fullname>
+		<phone-number>+79334567890</phone-number>
+		<e-mail>panpan@gmail.com</e-mail>
+		<status>активен</status>
+	</customer>
+	<customer id="011">
+		<fullname>Трифонова Анна Андреевна</fullname>
+		<phone-number>+79113458723</phone-number>
+		<e-mail>trifonova@mail.ru</e-mail>
+		<status>активен</status>
+	</customer>
+	<customer id="567">
+		<fullname>Елисеев Илья Олегович</fullname>
+		<phone-number>+79873426712</phone-number>
+		<e-mail>eliseevio@gmail.com</e-mail>
+		<status>не активен</status>
+	</customer>	
+</customers>
